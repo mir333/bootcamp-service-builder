@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.liferay.bootcamp">
+	<namespace>BOOK</namespace>
+
+	<entity name="Book" uuid="true" local-service="true" remote-service="true" cache-enabled="true" json-enabled="true">
+
+		<column name="bookId" type="long" primary="true" />
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<column name="bookName" type="String" />
+		<column name="bookAbstract" type="String" />
+		<column name="bookAuthorName" type="String" />
+		<column name="bookOnlinePdf" type="boolean" />
+		<column name="bookPageCount" type="int" />
+		<column name="bookPublishDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="bookName" />
+		</order>
+
+		<finder name="bookAuthorName" return-type="Collection">
+			<finder-column name="bookAuthorName" />
+		</finder>
+		<finder name="bookOnlinePdf" return-type="Collection">
+			<finder-column name="bookOnlinePdf" />
+		</finder>
+
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag" />
+
+	</entity>
+
+
+</service-builder>

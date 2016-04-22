@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="com.liferay.bootcamp.service.BookLocalService" class="com.liferay.bootcamp.service.impl.BookLocalServiceImpl" />
+	<bean id="com.liferay.bootcamp.service.BookService" class="com.liferay.bootcamp.service.impl.BookServiceImpl" />
+	<bean id="com.liferay.bootcamp.service.persistence.BookPersistence" class="com.liferay.bootcamp.service.persistence.impl.BookPersistenceImpl" parent="basePersistence" />
+</beans>

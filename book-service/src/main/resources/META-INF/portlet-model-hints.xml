@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.bootcamp.model.Book">
+		<field name="uuid" type="String" />
+		<field name="bookId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="bookName" type="String" />
+		<field name="bookAbstract" type="String" />
+		<field name="bookAuthorName" type="String" />
+		<field name="bookOnlinePdf" type="boolean" />
+		<field name="bookPageCount" type="int" />
+		<field name="bookPublishDate" type="Date" />
+	</model>
+</model-hints>

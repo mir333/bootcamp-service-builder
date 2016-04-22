@@ -1,0 +1,7 @@
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.liferay.bootcamp.exception,\
+	com.liferay.bootcamp.model,\
+	com.liferay.bootcamp.service,\
+	com.liferay.bootcamp.service.persistence
+-sources: true

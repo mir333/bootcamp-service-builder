@@ -1,0 +1,24 @@
+buildscript {
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.service.builder", version: "latest.release"
+		classpath group: "com.liferay", name: "com.liferay.portal.tools.service.builder", version: "1.0.103"
+	}
+}
+
+apply plugin: "com.liferay.portal.tools.service.builder"
+
+dependencies {
+	compile 'biz.aQute.bnd:biz.aQute.bndlib:3.1.0'
+	compile 'com.liferay:com.liferay.portal.spring.extender:2.0.2'
+	compile 'com.liferay:com.liferay.osgi.util:3.0.0'
+	compile  project(':book-api')
+	testCompile 'com.liferay:com.liferay.arquillian.extension.junit.bridge:1.0.0-SNAPSHOT'
+	testCompile 'junit:junit:4.+'
+}
+
+buildService {
+	apiDir = "../book-api/src/main/java"
+	osgiModule = true
+	propsUtil = "com.liferay.bootcamp.service.util.PropsUtil"
+	testDir = "src/main/test"
+}
